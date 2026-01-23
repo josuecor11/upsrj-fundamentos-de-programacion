@@ -1,26 +1,30 @@
 #include <stdio.h>
 
-float area(float l){
-    float are = l * l;
-    return are;
-}
-
-float volumen(float l){
-    float volume = l * l * l;
-    return volume;
-}
-
-int main(int argc, char *argv)
+int is_even(int num)
 {
-    float l = 0;
-    
-    printf("Ingrese la medida del lado del cuadrado\n");
-    scanf("%f", &l);
-    
-    float a = area(l);
-    float v = volumen(l);
+    if (num % 2 == 0) {
+       return 1; 
+    }else{
+        return 0;
+    }
+}
 
-    printf("El area de el cuadrado es de : %f \nEl volumen del cubo es de : %f\n", a, v);
+
+int main()
+{
+    int num;
+    int parimp;
+    
+    printf("Ingrese un numero\n");
+    scanf("%i", & num);
+    
+    parimp = is_even(num);
+
+    if(parimp == 1){
+        printf("El numero es par\n");
+    }else{
+        printf("El numero es impar\n");
+    }
 
     return 0;
 }
